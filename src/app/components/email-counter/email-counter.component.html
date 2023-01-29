@@ -1,0 +1,33 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div>
+    <div fxLayout="row" fxLayoutGap="8px" fxLayoutAlign="center center">
+      <button
+        mat-icon-button
+        [matBadge]="emailCount"
+        matBadgePosition="after"
+        matBadgeColor="warn"
+        (click)="resetInterval()"
+      >
+        <mat-icon>mail_outline</mat-icon>
+      </button>
+    </div>
+    <div fxLayout="row" fxLayoutGap="8px" fxLayoutAlign="center center">
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="isIntervalRunning"
+        (click)="startInterval()"
+      >
+        Start receiving
+      </button>
+      <button
+        mat-raised-button
+        color="accent"
+        [disabled]="!isIntervalRunning"
+        (click)="stopInterval()"
+      >
+        Stop receiving
+      </button>
+    </div>
+  </div>
+</div>
